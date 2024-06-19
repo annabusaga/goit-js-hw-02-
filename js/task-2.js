@@ -1,9 +1,15 @@
 function formatMessage(message, maxLength) {
+  // Варіант вирішення задачі через блок if...else
+
   if (message.length <= maxLength) {
     return `"${message}"`;
   } else {
     return `"${message.slice(0, maxLength)}"` + "...";
   }
+  // Варіант вирішення через тернарний оператор
+  //   return message.length <= maxLength
+  //     ? `"${message}"`
+  //     : `"${message.slice(0, maxLength)}"` + "...";
 }
 
 console.log(formatMessage("Curabitur ligula sapien", 16)); // "Curabitur ligula..."
